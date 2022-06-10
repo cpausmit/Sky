@@ -1,0 +1,11 @@
+Installed on submit01
+=====================
+
+pip3 install pyqt5 pandas matplotlib astropy h5py tables
+
+
+git clone 
+
+analyze data:
+
+  ./bin/analysis.py -i ./data/tesscurl_sector_1_lc/tess2018206045859-s0001-0000000121424447-0120-s_lc.fits
