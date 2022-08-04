@@ -51,7 +51,16 @@ for input in inputs:
             print(" EXIT -- Events processed: %d  of  %d"%(n_proc,n_lcs))
             sys.exit(0)
         else:
+            # processing this event
+            print("\n Processing event: %d (total read: %d)"%(n_proc,n))
             n_proc += 1
             print(repr(item))
 
         n += 1
+
+print(" EXIT -- Events read:      %d  skipped first  %d"%(n,n_skip))
+print(" EXIT -- Events processed: %d  of  %d requested"%(n_proc,n_lcs))
+if n_lcs>n_proc:
+    print(" WARNING -- less events processed than requested.")
+print(" EXIT -- REACHED END OF DATA")
+sys.exit(0)
