@@ -1,27 +1,35 @@
 Installed on submit01
 =====================
 
-pip3 install pyqt5 pandas matplotlib astropy h5py tables
-git  clone https://github.com/cpausmit/Sky
+Packages needed:
 
-BASE=/home/submit/paus/Tools/Sky
+   pip3 install pyqt5 pandas matplotlib astropy h5py tables
+
+Install it yourself:
+
+    git  clone https://github.com/cpausmit/Sky
+    cd Sky
+    ./install.sh
+    source ./setup.sh
+
+Installed in BASE=/home/submit/paus/Tools/Sky
 
 analyze data:
 
-  $BASE/bin/analyze.py
+  analyze.py
 
 write data:
 
   cd /scratch/submit/tess/data
-  $BASE/bin/write_file.py -i \
+  write_file.py -i \
     ./tesscurl_sector_2_lc/tess2018234235059-s0002-0000000120429951-0121-s_lc.fits,./tesscurl_sector_2_lc/tess2018234235059-s0002-0000000120429061-0121-s_lc.fits,./tesscurl_sector_2_lc/tess2018234235059-s0002-0000000120429898-0121-s_lc.fits
 
 read data:
 
-  $BASE/bin/write_file.py -i \
+  read_file.py -i \
     ./tess2018234235059-s0002-0000000120429951-0121_tess2018234235059-s0002-0000000120429951-0121_3.pkl -s 1 -n 2
 
 
 Processing all light curve files at once using slurm:
 
-  ./bin/process.sh
+  process.sh
